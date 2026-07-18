@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz — Fintech Analyst Prep</title>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/vendor/highlight.min.css">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main>
+    <div class="container">
+
+      <!-- Builder -->
+      <section id="quiz-builder" class="quiz-builder">
+        <h1>Build a quiz</h1>
+        <p class="text-muted small">Pick modules, topics, and how many questions. Flashcards let you self-grade. MCQ auto-generates 3 distractors per question.</p>
+
+        <div class="row">
+          <label>Modules <span class="hint">(untick to exclude)</span></label>
+          <div class="module-picker" id="module-picker">
+            <div class="loading">Loading modules</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <label>Source</label>
+          <div class="radio-row" id="source-row">
+            <label><input type="radio" name="source" value="quickhit_flashcards" checked> Quick-Hit + Flashcards <span class="text-muted small">(default)</span></label>
+            <label><input type="radio" name="source" value="all"> All files</label>
+            <label><input type="radio" name="source" value="quick_hit"> Quick-Hit only</label>
+            <label><input type="radio" name="source" value="focused"> Focused</label>
+            <label><input type="radio" name="source" value="comprehensive"> Comprehensive</label>
+            <label><input type="radio" name="source" value="flashcards"> Flashcards only</label>
+            <label><input type="radio" name="source" value="exercises"> Exercises</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <label>Format</label>
+          <div class="radio-row">
+            <label><input type="radio" name="format" value="flashcard" checked> 🃏 Flashcard (self-grade)</label>
+            <label><input type="radio" name="format" value="mcq"> ✅ Multiple choice</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <label>Order</label>
+          <div class="radio-row">
+            <label><input type="radio" name="order" value="random" checked> Random</label>
+            <label><input type="radio" name="order" value="source"> Source order</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <label>Number of questions <span class="hint">5–100</span></label>
+          <div class="slider-row">
+            <input type="range" id="qty-slider" min="5" max="100" step="5" value="20">
+            <span class="count-display" id="qty-display">20</span>
+          </div>
+        </div>
+
+        <div class="pool-info" id="pool-info">Pool size: — · Requested: 20</div>
+
+        <button class="btn btn-primary" id="start-quiz" style="width:100%; justify-content:center; font-size:1.05rem; padding:0.85rem;" disabled>Start quiz</button>
+      </section>
+
+      <!-- Runner -->
+      <section id="quiz-runner" class="quiz-runner hidden">
+        <div class="quiz-progress">
+          <div>Question <strong id="cur-num">1</strong> of <strong id="total-num">20</strong></div>
+          <div class="bar"><div id="progress-bar" style="width:0%"></div></div>
+          <button class="btn small" id="abort-btn" style="padding:0.3rem 0.75rem; font-size:0.85rem;">Exit quiz</button>
+        </div>
+        <div id="quiz-card-container"></div>
+      </section>
+
+      <!-- End screen -->
+      <section id="quiz-end" class="quiz-end hidden"></section>
+
+    </div>
+  </main>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/vendor/marked.min.js"></script>
+  <script src="assets/vendor/highlight.min.js"></script>
+  <script src="assets/vendor/hljs-sql.min.js"></script>
+  <script src="assets/vendor/hljs-bash.min.js"></script>
+  <script src="assets/vendor/hljs-python.min.js"></script>
+  <script src="assets/vendor/hljs-cpp.min.js"></script>
+  <script src="assets/js/quiz.js"></script>
+</body>
+</html>

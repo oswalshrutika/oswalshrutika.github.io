@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fintech Analyst Prep</title>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main>
+    <div class="container">
+
+      <section class="hero">
+        <h1>Fintech Analyst — Interview Prep</h1>
+        <p class="subtitle">
+          Study 1,150+ Q&amp;A across FIX, OMS, SQL, Linux, networking, and market structure.
+          Generate custom quizzes by module, topic, and question count.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="quiz.html">🎯 Start a quiz</a>
+          <a class="btn" href="study.html">📖 Browse study material</a>
+        </div>
+      </section>
+
+      <h2 class="section-heading">Reading plans</h2>
+      <div class="plans-tabs" role="tablist">
+        <button type="button" class="active" data-plan="14d" role="tab">2 weeks — deep</button>
+        <button type="button" data-plan="3d" role="tab">3 days — focused</button>
+        <button type="button" data-plan="1d" role="tab">1 day — crash</button>
+        <button type="button" data-plan="5h" role="tab">5 hours — emergency</button>
+      </div>
+      <div class="plan-content" id="plan-content"></div>
+
+      <h2 class="section-heading">Modules</h2>
+      <div class="module-grid" id="module-grid">
+        <div class="loading">Loading modules</div>
+      </div>
+
+      <h2 class="section-heading">Quick actions</h2>
+      <div class="cta-row" style="justify-content:flex-start;">
+        <a class="btn" href="quiz.html?preset=flashcards">🃏 Random flashcards (60)</a>
+        <a class="btn" href="study.html?file=08_cheat_sheet/00_INDEX.md">📚 Cheat sheet index</a>
+        <a class="btn" href="study.html?file=08_cheat_sheet/09_last_hour_checklist.md">⏰ Last-hour checklist</a>
+        <a class="btn" href="study.html?file=08_cheat_sheet/08_flashcards.md">🎴 60 flashcards page</a>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="assets/js/common.js"></script>
+  <script>
+    const PLANS = {
+      "14d": {
+        title: "2-week deep plan",
+        html: `
+          <p>Two hours of mornings + one hour of evenings. Every file is linkable.</p>
+          <table>
+            <thead><tr><th>Day</th><th>Morning (2h)</th><th>Evening (1h)</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td><a href="study.html?file=01_internal_codebase/01_comprehensive.md">Internal codebase — Comprehensive §1–3</a></td><td><a href="study.html?file=08_cheat_sheet/01_cheatsheet_fix_tags.md">Cheatsheet — FIX tags</a></td></tr>
+              <tr><td>2</td><td><a href="study.html?file=01_internal_codebase/01_comprehensive.md">Internal codebase — Comprehensive §4–7</a></td><td><a href="study.html?file=01_internal_codebase/04_diagrams.md">Internal codebase — Diagrams</a></td></tr>
+              <tr><td>3</td><td><a href="study.html?file=03_fix_protocol/01_comprehensive.md">FIX — Comprehensive</a></td><td><a href="study.html?file=08_cheat_sheet/02_cheatsheet_order_lifecycle.md">Cheatsheet — Order Lifecycle</a></td></tr>
+              <tr><td>4</td><td><a href="study.html?file=03_fix_protocol/02_focused.md">FIX — Focused</a> + <a href="study.html?file=03_fix_protocol/06_mock_interview.md">Mock</a></td><td><a href="study.html?file=03_fix_protocol/04_diagrams.md">FIX — Diagrams</a></td></tr>
+              <tr><td>5</td><td><a href="study.html?file=02_oms_market/01_comprehensive.md">OMS &amp; Market — Comprehensive §1–5</a></td><td><a href="study.html?file=08_cheat_sheet/03_cheatsheet_us_market_structure.md">Cheatsheet — US Market</a></td></tr>
+              <tr><td>6</td><td><a href="study.html?file=02_oms_market/01_comprehensive.md">OMS &amp; Market — Comprehensive §6–10</a></td><td><a href="study.html?file=02_oms_market/06_mock_interview.md">OMS &amp; Market — Mock</a></td></tr>
+              <tr><td>7</td><td><a href="study.html?file=04_sql/01_comprehensive.md">SQL — Comprehensive</a> + <a href="study.html?file=04_sql/07_exercises.md">Exercises</a></td><td><a href="study.html?file=08_cheat_sheet/04_cheatsheet_sql.md">Cheatsheet — SQL</a></td></tr>
+              <tr><td>8</td><td><a href="study.html?file=05_linux/01_comprehensive.md">Linux — Comprehensive</a> + <a href="study.html?file=05_linux/07_exercises.md">Exercises</a></td><td><a href="study.html?file=08_cheat_sheet/05_cheatsheet_linux.md">Cheatsheet — Linux</a></td></tr>
+              <tr><td>9</td><td><a href="study.html?file=06_networking/01_comprehensive.md">Networking — Comprehensive</a></td><td><a href="study.html?file=08_cheat_sheet/06_cheatsheet_networking.md">Cheatsheet — Networking</a></td></tr>
+              <tr><td>10</td><td><a href="study.html?file=07_situational/01_comprehensive.md">Situational — all STAR stories</a></td><td><a href="study.html?file=08_cheat_sheet/07_cheatsheet_star_openers.md">Cheatsheet — STAR openers</a></td></tr>
+              <tr><td>11</td><td>Mock loop: <a href="study.html?file=03_fix_protocol/06_mock_interview.md">FIX</a> + <a href="study.html?file=02_oms_market/06_mock_interview.md">OMS</a></td><td><a href="quiz.html?preset=flashcards&amp;n=30">Flashcards — first 30</a></td></tr>
+              <tr><td>12</td><td>Mock loop: <a href="study.html?file=01_internal_codebase/06_mock_interview.md">Codebase</a> + <a href="study.html?file=07_situational/01_comprehensive.md">Situational</a></td><td><a href="quiz.html?preset=flashcards&amp;n=30">Flashcards — last 30</a></td></tr>
+              <tr><td>13</td><td>Red flags across all modules</td><td>Rest — sleep</td></tr>
+              <tr><td>14</td><td><a href="study.html?file=08_cheat_sheet/09_last_hour_checklist.md">Last-hour checklist</a></td><td>Interview</td></tr>
+            </tbody>
+          </table>`,
+      },
+      "3d": {
+        title: "3-day focused plan",
+        html: `
+          <ul>
+            <li><strong>Day 1:</strong> <a href="study.html?file=01_internal_codebase/02_focused.md">Codebase — Focused</a> + <a href="study.html?file=03_fix_protocol/02_focused.md">FIX — Focused</a> + cheatsheets <a href="study.html?file=08_cheat_sheet/01_cheatsheet_fix_tags.md">01</a>, <a href="study.html?file=08_cheat_sheet/02_cheatsheet_order_lifecycle.md">02</a></li>
+            <li><strong>Day 2:</strong> <a href="study.html?file=02_oms_market/02_focused.md">OMS &amp; Market — Focused</a> + <a href="study.html?file=04_sql/02_focused.md">SQL — Focused</a> + <a href="study.html?file=05_linux/02_focused.md">Linux — Focused</a> + cheatsheets <a href="study.html?file=08_cheat_sheet/03_cheatsheet_us_market_structure.md">03</a>, <a href="study.html?file=08_cheat_sheet/04_cheatsheet_sql.md">04</a>, <a href="study.html?file=08_cheat_sheet/05_cheatsheet_linux.md">05</a></li>
+            <li><strong>Day 3:</strong> <a href="study.html?file=06_networking/02_focused.md">Networking — Focused</a> + <a href="study.html?file=07_situational/01_comprehensive.md">Situational — memorize 3 STAR stories</a> + cheatsheets <a href="study.html?file=08_cheat_sheet/06_cheatsheet_networking.md">06</a>, <a href="study.html?file=08_cheat_sheet/07_cheatsheet_star_openers.md">07</a> + <a href="study.html?file=08_cheat_sheet/08_flashcards.md">flashcards</a></li>
+          </ul>`,
+      },
+      "1d": {
+        title: "1-day crash plan",
+        html: `
+          <ul>
+            <li><strong>AM (4h):</strong> Quick-hit files for modules 01–04 —
+              <a href="study.html?file=01_internal_codebase/03_quick_hit.md">Codebase</a>,
+              <a href="study.html?file=02_oms_market/03_quick_hit.md">OMS &amp; Market</a>,
+              <a href="study.html?file=03_fix_protocol/03_quick_hit.md">FIX</a>,
+              <a href="study.html?file=04_sql/03_quick_hit.md">SQL</a>.
+            </li>
+            <li><strong>PM (4h):</strong>
+              <a href="study.html?file=05_linux/03_quick_hit.md">Linux Quick-Hit</a> +
+              <a href="study.html?file=06_networking/03_quick_hit.md">Networking Quick-Hit</a> +
+              <a href="study.html?file=07_situational/03_quick_hit.md">Situational Quick-Hit</a> +
+              all 9 cheatsheets in <a href="study.html?file=08_cheat_sheet/00_INDEX.md">08/</a>.
+            </li>
+          </ul>`,
+      },
+      "5h": {
+        title: "5-hour emergency plan",
+        html: `
+          <ol>
+            <li><strong>h1:</strong> <a href="study.html?file=08_cheat_sheet/00_INDEX.md">Master index</a> + <a href="study.html?file=08_cheat_sheet/01_cheatsheet_fix_tags.md">FIX tags</a> + <a href="study.html?file=08_cheat_sheet/02_cheatsheet_order_lifecycle.md">Order lifecycle</a></li>
+            <li><strong>h2:</strong> <a href="study.html?file=08_cheat_sheet/03_cheatsheet_us_market_structure.md">US market structure</a> + <a href="study.html?file=08_cheat_sheet/04_cheatsheet_sql.md">SQL</a></li>
+            <li><strong>h3:</strong> <a href="study.html?file=08_cheat_sheet/05_cheatsheet_linux.md">Linux</a> + <a href="study.html?file=08_cheat_sheet/06_cheatsheet_networking.md">Networking</a></li>
+            <li><strong>h4:</strong> <a href="study.html?file=08_cheat_sheet/07_cheatsheet_star_openers.md">STAR openers</a> — rehearse 3 stories aloud</li>
+            <li><strong>h5:</strong> <a href="study.html?file=08_cheat_sheet/08_flashcards.md">60 flashcards</a> + <a href="study.html?file=08_cheat_sheet/09_last_hour_checklist.md">Last-hour checklist</a></li>
+          </ol>`,
+      },
+    };
+
+    onReady(async () => {
+      renderHeader("home");
+      renderPlan("14d");
+      document.querySelectorAll(".plans-tabs button").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".plans-tabs button").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderPlan(btn.dataset.plan);
+        });
+      });
+      try {
+        const modules = await loadModules();
+        const q = await loadQuestions();
+        renderModuleGrid(modules, q);
+      } catch (e) {
+        document.getElementById("module-grid").innerHTML =
+          `<p class="text-muted">Failed to load modules: ${esc(e.message)}. If you opened this file directly, serve it with <code>python3 -m http.server</code> from the <code>site/</code> directory.</p>`;
+      }
+    });
+
+    function renderPlan(id) {
+      const p = PLANS[id];
+      document.getElementById("plan-content").innerHTML = p ? p.html : "";
+    }
+
+    function renderModuleGrid(modules, questionData) {
+      const grid = document.getElementById("module-grid");
+      const counts = {};
+      for (const q of questionData.questions) {
+        counts[q.module] = (counts[q.module] || 0) + 1;
+      }
+      grid.innerHTML = modules.map((m, i) => `
+        <a class="module-card" href="study.html?file=${encodeURIComponent(m.slug + '/00_INDEX.md')}">
+          <span class="num">${String(i + 1).padStart(2, '0')}</span>
+          <h3 class="title">${esc(m.label)}</h3>
+          <p class="desc">${esc(m.description)}</p>
+          <div class="meta">${m.files.length} files · ${counts[m.slug] || 0} Q&amp;A</div>
+        </a>
+      `).join("");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+{
+  "modules": [
+    {
+      "slug": "01_internal_codebase",
+      "label": "Internal Codebase",
+      "short_label": "Codebase",
+      "description": "Vendor OMS walkthrough — architecture, Lua, OM rules, custom FIX tags, DFD, purge, ATDL, alerts.",
+      "files": [
+        {"name": "00_INDEX.md", "label": "Index"},
+        {"name": "01_comprehensive.md", "label": "Comprehensive (124 Q&A)", "kind": "comprehensive"},
+        {"name": "02_focused.md", "label": "Focused (50 Q&A)", "kind": "focused"},
+        {"name": "03_quick_hit.md", "label": "Quick-Hit (25 Q&A)", "kind": "quick_hit"},
+        {"name": "04_diagrams.md", "label": "Diagrams", "kind": "diagrams"},
+        {"name": "05_red_flags.md", "label": "Red Flags", "kind": "red_flags"},
+        {"name": "06_mock_interview.md", "label": "Mock Interview", "kind": "mock"}
+      ],
+      "topics": [
+        {"slug": "wire_flow", "label": "Wire flow & session", "quick_hit_range": [1, 5]},
+        {"slug": "custom_tags", "label": "Custom FIX tags", "quick_hit_range": [6, 12]},
+        {"slug": "order_manager", "label": "Order Manager rules & Lua", "quick_hit_range": [13, 18]},
+        {"slug": "operations", "label": "Purge, alerts & operations", "quick_hit_range": [19, 25]}
+      ]
+    },
+    {
+      "slug": "02_oms_market",
+      "label": "OMS & Market Structure",
+      "short_label": "OMS/Market",
+      "description": "OMS vs EMS, US market structure, order types, venues, Reg NMS, T+1, dark pools.",
+      "files": [
+        {"name": "00_INDEX.md", "label": "Index"},
+        {"name": "01_comprehensive.md", "label": "Comprehensive (74 Q&A)", "kind": "comprehensive"},
+        {"name": "02_focused.md", "label": "Focused (50 Q&A)", "kind": "focused"},
+        {"name": "03_quick_hit.md", "label": "Quick-Hit (25 Q&A)", "kind": "quick_hit"},
+        {"name": "05_red_flags.md", "label": "Red Flags", "kind": "red_flags"},
+        {"name": "06_mock_interview.md", "label": "Mock Interview", "kind": "mock"}
+      ],
+      "topics": [
+        {"slug": "oms_ems", "label": "OMS vs EMS & buy/sell-side", "quick_hit_range": [1, 3]},
+        {"slug": "order_types", "label": "Order types & TIF", "quick_hit_range": [4, 13]},
+        {"slug": "regulations", "label": "Reg NMS, Reg SHO, T+1", "quick_hit_range": [4, 20]},
+        {"slug": "venues", "label": "Venues, dark pools, tapes", "quick_hit_range": [14, 24]},
+        {"slug": "post_trade", "label": "Clearing & settlement", "quick_hit_range": [25, 25]}
+      ]
+    },
+    {
+      "slug": "03_fix_protocol",
+      "label": "FIX Protocol",
+      "short_label": "FIX",
+      "description": "FIX 4.2 / 4.4 / 5.0 — session layer, order flow, ExecutionReports, cancel/replace.",
+      "files": [
+        {"name": "00_INDEX.md", "label": "Index"},
+        {"name": "01_comprehensive.md", "label": "Comprehensive (110 Q&A)", "kind": "comprehensive"},
+        {"name": "02_focused.md", "label": "Focused (50 Q&A)", "kind": "focused"},
+        {"name": "03_quick_hit.md", "label": "Quick-Hit (25 Q&A)", "kind": "quick_hit"},
+        {"name": "04_diagrams.md", "label": "Diagrams", "kind": "diagrams"},
+        {"name": "05_red_flags.md", "label": "Red Flags", "kind": "red_flags"},
+        {"name": "06_mock_interview.md", "label": "Mock Interview", "kind": "mock"}
+      ],
+      "topics": [
+        {"slug": "session_layer", "label": "Session layer & wire format", "quick_hit_range": [1, 8]},
+        {"slug": "order_flow", "label": "Order flow & ExecutionReports", "quick_hit_range": [9, 20]},
+        {"slug": "operations", "label": "Operational edge cases", "quick_hit_range": [21, 25]}
+      ]
+    },
+    {
+      "slug": "04_sql",
+      "label": "SQL",
+      "short_label": "SQL",
+      "description": "SQL for OMS support — joins, windows, NULL handling, transactions, performance.",
+      "files": [
+        {"name": "00_INDEX.md", "label": "Index"},
+        {"name": "01_comprehensive.md", "label": "Comprehensive (116 Q&A)", "kind": "comprehensive"},
+        {"name": "02_focused.md", "label": "Focused (50 Q&A)", "kind": "focused"},
+        {"name": "03_quick_hit.md", "label": "Quick-Hit (25 Q&A)", "kind": "quick_hit"},
+        {"name": "05_red_flags.md", "label": "Red Flags", "kind": "red_flags"},
+        {"name": "06_mock_interview.md", "label": "Mock Interview", "kind": "mock"},
+        {"name": "07_exercises.md", "label": "Exercises (20 drills)", "kind": "exercises"}
+      ],
+      "topics": [
+        {"slug": "joins", "label": "Joins & set operators", "quick_hit_range": [1, 5]},
+        {"slug": "windows", "label": "Window functions & ranking", "quick_hit_range": [6, 10]},
+        {"slug": "nulls", "label": "NULL handling & predicates", "quick_hit_range": [11, 14]},
+        {"slug": "subqueries", "label": "Subqueries, CTEs, EXISTS", "quick_hit_range": [15, 18]},
+        {"slug": "transactions", "label": "Transactions, isolation, locking", "quick_hit_range": [19, 22]},
+        {"slug": "performance", "label": "Performance, indexes, plan reading", "quick_hit_range": [23, 25]}
+      ]
+    },
+    {
+      "slug": "05_linux",
+      "label": "Linux",
+      "short_label": "Linux",
+      "description": "Prod-support Linux — signals, log tailing, tcpdump, strace, cron, permissions.",
+      "files": [
+        {"name": "00_INDEX.md", "label": "Index"},
+        {"name": "01_comprehensive.md", "label": "Comprehensive (75 Q&A)", "kind": "comprehensive"},
+        {"name": "02_focused.md", "label": "Focused (50 Q&A)", "kind": "focused"},
+        {"name": "03_quick_hit.md", "label": "Quick-Hit (25 Q&A)", "kind": "quick_hit"},
+        {"name": "05_red_flags.md", "label": "Red Flags", "kind": "red_flags"},
+        {"name": "06_mock_interview.md", "label": "Mock Interview", "kind": "mock"},
+        {"name": "07_exercises.md", "label": "Exercises (20 drills)", "kind": "exercises"}
+      ],
+      "topics": [
+        {"slug": "signals", "label": "Signals, kill & processes", "quick_hit_range": [1, 3]},
+        {"slug": "logs", "label": "Logs, tail & grep/awk/sed", "quick_hit_range": [2, 8]},
+        {"slug": "network_tools", "label": "tcpdump / ss / lsof", "quick_hit_range": [4, 13]},
+        {"slug": "system", "label": "ulimit, cron, timezone", "quick_hit_range": [9, 11]},
+        {"slug": "disk_files", "label": "Files, disk, permissions", "quick_hit_range": [12, 22]},
+        {"slug": "debug", "label": "strace, top, journalctl", "quick_hit_range": [15, 25]}
+      ]
+    },
+    {
+      "slug": "06_networking",
+      "label": "Networking",
+      "short_label": "Network",
+      "description": "TCP, TLS, DNS, colo, kernel bypass, market data multicast, tcpdump/Wireshark.",
+      "files": [
+        {"name": "00_INDEX.md", "label": "Index"},
+        {"name": "01_comprehensive.md", "label": "Comprehensive (63 Q&A)", "kind": "comprehensive"},
+        {"name": "02_focused.md", "label": "Focused (50 Q&A)", "kind": "focused"},
+        {"name": "03_quick_hit.md", "label": "Quick-Hit (25 Q&A)", "kind": "quick_hit"},
+        {"name": "05_red_flags.md", "label": "Red Flags", "kind": "red_flags"},
+        {"name": "06_mock_interview.md", "label": "Mock Interview", "kind": "mock"}
+      ],
+      "topics": [
+        {"slug": "tcp", "label": "TCP fundamentals", "quick_hit_range": [1, 6]},
+        {"slug": "tls_dns", "label": "TLS & DNS", "quick_hit_range": [7, 8]},
+        {"slug": "colo_latency", "label": "Colo, kernel bypass, latency", "quick_hit_range": [9, 10]},
+        {"slug": "troubleshoot", "label": "Sockets, retransmit, RST/FIN", "quick_hit_range": [11, 22]},
+        {"slug": "market_data", "label": "Multicast & market data", "quick_hit_range": [23, 25]}
+      ]
+    },
+    {
+      "slug": "07_situational",
+      "label": "Situational / Behavioral",
+      "short_label": "Behavioral",
+      "description": "STAR stories — production incidents, conflicts, mentoring, cross-team RCA.",
+      "files": [
+        {"name": "00_INDEX.md", "label": "Index"},
+        {"name": "01_comprehensive.md", "label": "Comprehensive (13 stories)", "kind": "comprehensive"},
+        {"name": "02_focused.md", "label": "Focused (20 stories)", "kind": "focused"},
+        {"name": "03_quick_hit.md", "label": "Quick-Hit (12 openers)", "kind": "quick_hit"},
+        {"name": "05_red_flags.md", "label": "Red Flags", "kind": "red_flags"},
+        {"name": "06_mock_interview.md", "label": "Mock Interview", "kind": "mock"}
+      ],
+      "topics": [
+        {"slug": "incidents", "label": "Production incidents", "quick_hit_range": [1, 4]},
+        {"slug": "conflict", "label": "Conflict & escalation", "quick_hit_range": [3, 6]},
+        {"slug": "mentoring", "label": "Mentoring & leadership", "quick_hit_range": [7, 10]},
+        {"slug": "process", "label": "Process & communication", "quick_hit_range": [11, 12]}
+      ]
+    },
+    {
+      "slug": "08_cheat_sheet",
+      "label": "Cheat Sheets & Flashcards",
+      "short_label": "Cheat Sheets",
+      "description": "One-page references + 60 flashcards + last-hour checklist.",
+      "files": [
+        {"name": "00_INDEX.md", "label": "Master Index"},
+        {"name": "01_cheatsheet_fix_tags.md", "label": "FIX Tags", "kind": "cheatsheet"},
+        {"name": "02_cheatsheet_order_lifecycle.md", "label": "Order Lifecycle", "kind": "cheatsheet"},
+        {"name": "03_cheatsheet_us_market_structure.md", "label": "US Market Structure", "kind": "cheatsheet"},
+        {"name": "04_cheatsheet_sql.md", "label": "SQL", "kind": "cheatsheet"},
+        {"name": "05_cheatsheet_linux.md", "label": "Linux", "kind": "cheatsheet"},
+        {"name": "06_cheatsheet_networking.md", "label": "Networking", "kind": "cheatsheet"},
+        {"name": "07_cheatsheet_star_openers.md", "label": "STAR Openers", "kind": "cheatsheet"},
+        {"name": "08_flashcards.md", "label": "Flashcards (60)", "kind": "flashcards"},
+        {"name": "09_last_hour_checklist.md", "label": "Last-Hour Checklist", "kind": "checklist"}
+      ],
+      "topics": [
+        {"slug": "flashcards_fix", "label": "Flashcards — FIX Protocol", "flashcard_range": [1, 15]},
+        {"slug": "flashcards_oms", "label": "Flashcards — Order Lifecycle & OMS", "flashcard_range": [16, 25]},
+        {"slug": "flashcards_market", "label": "Flashcards — US Market Structure", "flashcard_range": [26, 35]},
+        {"slug": "flashcards_sql", "label": "Flashcards — SQL", "flashcard_range": [36, 43]},
+        {"slug": "flashcards_linux", "label": "Flashcards — Linux", "flashcard_range": [44, 50]},
+        {"slug": "flashcards_networking", "label": "Flashcards — Networking", "flashcard_range": [51, 56]},
+        {"slug": "flashcards_behavioral", "label": "Flashcards — Behavioral", "flashcard_range": [57, 60]}
+      ]
+    }
+  ]
+}
